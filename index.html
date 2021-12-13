@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button type="button" class="button" value="Draw" onClick="SwitchColors(this.value)" >Draw</button>
+            <button type="button" class="button" value="Erase" onClick="SwitchColors(this.value)">Erase</button>
+
+            <button type="button" class="button" onClick="undo()">Undo</button>
+            <button type="button" class="button" onClick="redo()">Redo</button>
+            <button type="button" class="button" onClick="clear_canvas()">clear</button>
+
+            <input type="color" id="color-picker" onInput="draw_color=this.value">
+            <input type="color" id="eraser-picker" value="#FFFFFF" onInput="eraser_color=this.value">
+            <input type="range" id="pen-size" value="7" min="1" max="25" onInput="draw_width=this.value">
+            <button type="button" class="button" id="save">Save</button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
